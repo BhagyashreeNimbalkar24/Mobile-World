@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CLIENT REVIEW </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="review.css">
+</head>
+
+<body>
+
+    <script>
+        $(document).on('click','.navbar-collapse.in',function(e) {
+
+if( $(e.target).is('a') && ( $(e.target).attr('class') != 'dropdown-toggle' ) ) {
+    $(this).collapse('hide');
+}
+});
+
+$( window ).scroll(function() {   
+if ($(window).scrollTop() > 50) {
+                $('nav').addClass('animated fadeIn fixed');
+  }
+
+         else {
+             $('nav').removeClass('animated fadeIn fixed');
+         }
+});
+$('.navbar-toggle').click(function(){
+if($('nav').hasClass('fixed')){
+$('#navbar .navbar-collapse').css('top','100px');
+$('.wrapper').removeClass();
+
+}
+else{
+$('#navbar .navbar-collapse').css('top','25px');
+$('#togbtn').addClass('wrapper');
+}
+});
+(function ($) {
+
+'use strict';
+
+// Toggle classes in body for syncing sliding animation with other elements
+$('#myNavbar')
+    .on('show.bs.collapse', function (e) {
+        $('body').addClass('menu-slider');
+    })
+    .on('shown.bs.collapse', function (e) {
+        $('body').addClass('in');
+    })
+    .on('hide.bs.collapse', function (e) {
+        $('body').removeClass('menu-slider');
+    })
+    .on('hidden.bs.collapse', function (e) {
+        $('body').removeClass('in');
+    });
+
+})(jQuery);
+
+$('.wrapper').click(function(){
+
+setInterval(function(){ 
+$('.nav li:nth-child(1)').addClass('animated fadeInRight');
+ $('.review_category ul li').removeClass('animated fadeInRight');
+ }, 500);
+setInterval(function(){ 
+$('.nav li:nth-child(2)').addClass('animated fadeInRight');
+ $('.review_category ul li').removeClass('animated fadeInRight');
+ },600);
+setInterval(function(){ 
+$('.nav li:nth-child(3)').addClass('animated fadeInRight');
+ $('.review_category ul li').removeClass('animated fadeInRight');
+ }, 700);
+setInterval(function(){ 
+$('.nav li:nth-child(4)').addClass('animated fadeInRight');
+ $('.review_category ul li').removeClass('animated fadeInRight');
+ }, 800);
+setInterval(function(){ 
+$('.nav li:nth-child(5)').addClass('animated fadeInRight');
+ $('.review_category ul li').removeClass('animated fadeInRight');
+ }, 900);
+setInterval(function(){ 
+$('.nav li:nth-child(6)').addClass('animated fadeInRight');
+ $('.review_category ul li').removeClass('animated fadeInRight');
+ },1000);
+setInterval(function(){ 
+$('.nav li:nth-child(7)').addClass('animated fadeInRight');
+ $('.review_category ul li').removeClass('animated fadeInRight');
+ },1100);
+$('.nav li').removeClass('animated fadeInRight');
+});
+$(document).ready(function(){
+$template=$('.rating').clone();
+$('.myrate').append($template);
+$('.myrate input#star4').attr('checked','checked');
+
+});
+    </script>
+    <!-- Main Container for Clients Review -->
+    <div class="container">
+        <h2> Our Happy Clients </h2>
+        <p class="description">Mobile World brings satisfaction to our customers!</p>
+    
+        <!-- Clients Review Section -->
+        <div class="reviewSection">
+
+        <!-- Clients Review-1 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        
+                        <span>Sachin Chandwade</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+                <article>
+                    <p class="review">I bought iphone13 pro max.And,the product quality is very nice.</p>
+                    <p>Jan 01, 2023</p>
+                </article>
+            </div>
+
+        <!-- Clients Review-2 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        
+                        <span>Bhagyashree N</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+                <article>
+                    <p class="review">Their service is fantastic!They produce good quality products..</p>
+                    <p>Mar 01, 2023</p>
+                </article>
+            </div>
+
+        <!-- Clients Review-3 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        
+                        <span>Komal Jadhav</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        
+                    </ul>
+                </div>
+                <article>
+                    <p class="review">I bought a smartwatch and its performance is very good.Mobile world is the best place.</p>
+                    <p>May 15, 2023</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
